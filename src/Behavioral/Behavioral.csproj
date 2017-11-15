@@ -4,4 +4,8 @@
     <TargetFramework>net47</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Reference Include="System.ServiceModel" />
+  </ItemGroup>
+
 </Project>
