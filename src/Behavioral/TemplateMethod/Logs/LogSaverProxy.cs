@@ -4,37 +4,37 @@ using System.ServiceModel;
 
 namespace Behavioral.TemplateMethod.Logs
 {
-	public interface ILogSaver
+	public interface ILogUploader
 	{
 		void UploadLogEntries(IEnumerable<LogEntry> logEntries);
 		void UploadExceptions(IEnumerable<ExceptionLogEntry> exceptions);
 	}
 
 	//local template method using delegates
-	public class LogSaverProxy : ILogSaver
+	public class LogUploaderProxy : ILogUploader
 	{
-		class LogSaverClient : ClientBase<ILogSaver>
+		class LogSaverClient : ClientBase<ILogUploader>
 		{
-			public ILogSaver LogSaver => Channel;
+			public ILogUploader LogUploader => Channel;
 		}
 
 		public void UploadLogEntries(IEnumerable<LogEntry> logEntries)
 		{
-			UseProxyClient(logSaver => logSaver.UploadLogEntries(logEntries));
+			UseProxyClient(logUploader => logUploader.UploadLogEntries(logEntries));
 		}
 
 		public void UploadExceptions(IEnumerable<ExceptionLogEntry> exceptions)
 		{
-			UseProxyClient(logSaver => logSaver.UploadExceptions(exceptions));
+			UseProxyClient(logUploader => logUploader.UploadExceptions(exceptions));
 		}
 
-		private void UseProxyClient(Action<ILogSaver> logSaverAccessor)
+		private void UseProxyClient(Action<ILogUploader> logUploaderAccessor)
 		{
 			var client = new LogSaverClient();
 
 			try
 			{
-				logSaverAccessor(client.LogSaver);
+				logUploaderAccessor(client.LogUploader);
 				client.Close();
 			}
 			catch (Exception)
