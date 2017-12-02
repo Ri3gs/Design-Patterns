@@ -3,6 +3,7 @@
 	public enum Severity
 	{
 		Error,
-		Information
+		Information,
+		Critical
 	}
 }
