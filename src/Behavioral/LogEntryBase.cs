@@ -1,4 +1,5 @@
 ﻿using System;
+using Behavioral.Visitor;
 
 namespace Behavioral
 {
@@ -8,5 +9,7 @@ namespace Behavioral
 		public Severity Severity { get; set; }
 		public string Message { get; set; }
 		public string AdditionalInformation { get; set; }
+
+		public abstract void Accept(ILogEntryVisitor logEntryVisitor);
 	}
 }
