@@ -54,4 +54,21 @@
 			throw new System.NotImplementedException();
 		}
 	}
+
+	public class DatabaseLogSaverFunctional
+	{
+		public void SaveLogEntry(LogEntryBase logEntry)
+		{
+			logEntry.Match(SaveException, SaveSimpleLogEntry);
+		}
+
+		private void SaveSimpleLogEntry(SimpleLogEntry simpleLogEntry)
+		{
+			throw new System.NotImplementedException();
+		}
+		private void SaveException(ExceptionLogEntry exception)
+		{
+			throw new System.NotImplementedException();
+		}
+	}
 }
