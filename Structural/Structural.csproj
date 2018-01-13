@@ -43,6 +43,12 @@
     <Compile Include="Adapter\ElasticsearchLogSaver.cs" />
     <Compile Include="Adapter\ILogSaver.cs" />
     <Compile Include="Adapter\SqlServerLogSaverAdapter.cs" />
+    <Compile Include="Decorator\ElasticSearchLogSaver.cs" />
+    <Compile Include="Decorator\ILogSaver.cs" />
+    <Compile Include="Decorator\LogSaverDecorator.cs" />
+    <Compile Include="Decorator\QuotaReachedException.cs" />
+    <Compile Include="Decorator\ThrottlingLogSaverDecorator.cs" />
+    <Compile Include="Decorator\TraceLogSaverDecorator.cs" />
     <Compile Include="Severity.cs" />
     <Compile Include="Adapter\SqlServerLogSaver.cs" />
     <Compile Include="ExceptionLogEntry.cs" />
