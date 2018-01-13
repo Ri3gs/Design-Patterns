@@ -40,10 +40,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Adapter\ElasticsearchLogSaver.cs" />
+    <Compile Include="Adapter\ILogSaver.cs" />
+    <Compile Include="Adapter\SqlServerLogSaverAdapter.cs" />
+    <Compile Include="Severity.cs" />
+    <Compile Include="Adapter\SqlServerLogSaver.cs" />
+    <Compile Include="ExceptionLogEntry.cs" />
+    <Compile Include="LogEntryBase.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SimpleLogEntry.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Adapter\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
