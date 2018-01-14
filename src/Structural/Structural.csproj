@@ -45,6 +45,7 @@
     <Compile Include="Adapter\SqlServerLogSaverAdapter.cs" />
     <Compile Include="Composite\AndLogImportRule.cs" />
     <Compile Include="Composite\CompositeLogRule.cs" />
+    <Compile Include="Composite\LogEntryBaseExtensions.cs" />
     <Compile Include="Composite\LogImportRule.cs" />
     <Compile Include="Composite\LogRuleFactory.cs" />
     <Compile Include="Composite\OrLogImportRule.cs" />
