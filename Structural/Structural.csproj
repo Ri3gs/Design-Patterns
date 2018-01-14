@@ -43,6 +43,12 @@
     <Compile Include="Adapter\ElasticsearchLogSaver.cs" />
     <Compile Include="Adapter\ILogSaver.cs" />
     <Compile Include="Adapter\SqlServerLogSaverAdapter.cs" />
+    <Compile Include="Composite\AndLogImportRule.cs" />
+    <Compile Include="Composite\CompositeLogRule.cs" />
+    <Compile Include="Composite\LogImportRule.cs" />
+    <Compile Include="Composite\LogRuleFactory.cs" />
+    <Compile Include="Composite\OrLogImportRule.cs" />
+    <Compile Include="Composite\SingleImportLogRule.cs" />
     <Compile Include="Decorator\ElasticSearchLogSaver.cs" />
     <Compile Include="Decorator\ILogSaver.cs" />
     <Compile Include="Decorator\LogSaverDecorator.cs" />
