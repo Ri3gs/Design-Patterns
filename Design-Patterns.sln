@@ -3,9 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27004.2009
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Behavioral", "src\Behavioral\Behavioral.csproj", "{11AA6F74-E6D1-4FB4-A028-02AEC044B713}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Behavioral", "Behavioral\Behavioral.csproj", "{11AA6F74-E6D1-4FB4-A028-02AEC044B713}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Structural", "src\Structural\Structural.csproj", "{44C549E1-0EDC-48F9-99CE-C11994812E79}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Structural", "Structural\Structural.csproj", "{44C549E1-0EDC-48F9-99CE-C11994812E79}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{CFAA60B7-CCEF-4B14-8D69-A4E90ADC76A2}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{7D431B8E-FDCA-4B56-BEDE-87095A6DDF70}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Structural.Test", "Structural.Test\Structural.Test.csproj", "{026D5E3D-44DA-406F-99EC-3A84A5238806}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,9 +27,18 @@ Global
 		{44C549E1-0EDC-48F9-99CE-C11994812E79}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{44C549E1-0EDC-48F9-99CE-C11994812E79}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{44C549E1-0EDC-48F9-99CE-C11994812E79}.Release|Any CPU.Build.0 = Release|Any CPU
+		{026D5E3D-44DA-406F-99EC-3A84A5238806}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{026D5E3D-44DA-406F-99EC-3A84A5238806}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{026D5E3D-44DA-406F-99EC-3A84A5238806}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{026D5E3D-44DA-406F-99EC-3A84A5238806}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{11AA6F74-E6D1-4FB4-A028-02AEC044B713} = {CFAA60B7-CCEF-4B14-8D69-A4E90ADC76A2}
+		{44C549E1-0EDC-48F9-99CE-C11994812E79} = {CFAA60B7-CCEF-4B14-8D69-A4E90ADC76A2}
+		{026D5E3D-44DA-406F-99EC-3A84A5238806} = {7D431B8E-FDCA-4B56-BEDE-87095A6DDF70}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {B88C5AF6-6F9B-4733-8C8D-385A6F1F9EC6}
