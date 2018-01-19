@@ -1,6 +1,6 @@
 ﻿namespace Structural
 {
-	public class SimpleLogEntry : LogEntryBase
+	public class SimpleLogEntry : LogEntry
 	{
 	}
 }

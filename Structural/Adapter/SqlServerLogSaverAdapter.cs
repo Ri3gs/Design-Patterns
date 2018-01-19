@@ -9,7 +9,7 @@
 			_sqlServerLogSaver = sqlServerLogSaver;
 		}
 
-		public void Save(LogEntryBase logEntry)
+		public void Save(LogEntry logEntry)
 		{
 			var simpleLogEntry = logEntry as SimpleLogEntry;
 			if (simpleLogEntry != null)

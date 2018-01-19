@@ -2,7 +2,7 @@
 
 namespace Structural
 {
-	public class ExceptionLogEntry : LogEntryBase
+	public class ExceptionLogEntry : LogEntry
 	{
 		public Exception Exception { get; set; }
 	}

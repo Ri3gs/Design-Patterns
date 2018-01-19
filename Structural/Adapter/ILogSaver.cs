@@ -2,6 +2,6 @@
 {
 	public interface ILogSaver
 	{
-		void Save(LogEntryBase logEntry);
+		void Save(LogEntry logEntry);
 	}
 }

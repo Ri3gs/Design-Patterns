@@ -4,6 +4,6 @@ namespace Structural.Decorator
 {
 	public interface ILogSaver
 	{
-		Task SaveLogEntry(string applicationId, LogEntryBase logEntry);
+		Task SaveLogEntry(string applicationId, LogEntry logEntry);
 	}
 }

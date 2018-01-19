@@ -9,7 +9,7 @@ namespace Structural.Decorator
 		{
 		}
 
-		public override async Task SaveLogEntry(string applicationId, LogEntryBase logEntry)
+		public override async Task SaveLogEntry(string applicationId, LogEntry logEntry)
 		{
 			var watch = Stopwatch.StartNew();
 			try

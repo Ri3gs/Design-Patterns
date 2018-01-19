@@ -11,6 +11,6 @@ namespace Structural.Decorator
 			_decoratee = decoratee;
 		}
 
-		public abstract Task SaveLogEntry(string applicationId, LogEntryBase logEntry);
+		public abstract Task SaveLogEntry(string applicationId, LogEntry logEntry);
 	}
 }

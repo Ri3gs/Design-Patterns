@@ -43,13 +43,13 @@
     <Compile Include="Adapter\ElasticsearchLogSaver.cs" />
     <Compile Include="Adapter\ILogSaver.cs" />
     <Compile Include="Adapter\SqlServerLogSaverAdapter.cs" />
-    <Compile Include="Composite\AndLogImportRule.cs" />
-    <Compile Include="Composite\CompositeLogRule.cs" />
+    <Compile Include="Composite\AndRule.cs" />
+    <Compile Include="Composite\CompositeRule.cs" />
     <Compile Include="Composite\LogEntryBaseExtensions.cs" />
-    <Compile Include="Composite\LogImportRule.cs" />
-    <Compile Include="Composite\LogRuleFactory.cs" />
-    <Compile Include="Composite\OrLogImportRule.cs" />
-    <Compile Include="Composite\SingleImportLogRule.cs" />
+    <Compile Include="Composite\ImportRule.cs" />
+    <Compile Include="Composite\RuleFactory.cs" />
+    <Compile Include="Composite\OrRule.cs" />
+    <Compile Include="Composite\SingleRule.cs" />
     <Compile Include="Decorator\ElasticSearchLogSaver.cs" />
     <Compile Include="Decorator\ILogSaver.cs" />
     <Compile Include="Decorator\LogSaverDecorator.cs" />
@@ -59,7 +59,7 @@
     <Compile Include="Severity.cs" />
     <Compile Include="Adapter\SqlServerLogSaver.cs" />
     <Compile Include="ExceptionLogEntry.cs" />
-    <Compile Include="LogEntryBase.cs" />
+    <Compile Include="LogEntry.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SimpleLogEntry.cs" />
   </ItemGroup>

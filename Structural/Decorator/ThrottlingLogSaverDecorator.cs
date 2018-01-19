@@ -7,7 +7,7 @@ namespace Structural.Decorator
 	{
 		public ThrottlingLogSaverDecorator(ILogSaver decoratee) : base(decoratee) {}
 
-		public override Task SaveLogEntry(string applicationId, LogEntryBase logEntry)
+		public override Task SaveLogEntry(string applicationId, LogEntry logEntry)
 		{
 			if (QuotaReached())
 			{

@@ -7,12 +7,12 @@ namespace Structural.Test
 	[TestClass]
 	public class RejectOldEntriesWithLowSeverityTest
 	{
-		private LogImportRule _rule;
+		private ImportRule _rule;
 
 		[TestInitialize]
 		public void Initialize()
 		{
-			_rule = LogRuleFactory.RejectOldEntriesWithLowSeverity(TimeSpan.FromDays(7));
+			_rule = RuleFactory.RejectOldEntriesWithLowSeverity(TimeSpan.FromDays(7));
 		}
 
 		[TestMethod]
@@ -29,7 +29,10 @@ namespace Structural.Test
 		public void RejectsOldEntryWithLowSeverity()
 		{
 			// Arrange
-			var logEntry = new SimpleLogEntry { EntryDateTime = DateTime.Now.AddDays(-10) };
+			var logEntry = new SimpleLogEntry
+			{
+				EntryDateTime = DateTime.Now.AddDays(-10)
+			};
 
 			// Assert
 			Assert.IsFalse(_rule.ShouldImport(logEntry));
@@ -39,7 +42,11 @@ namespace Structural.Test
 		public void ImportsOldEntryWithHighSeverity()
 		{
 			// Arrange
-			var logEntry = new SimpleLogEntry { EntryDateTime = DateTime.Now.AddDays(-10), Severity = Severity.Critical };
+			var logEntry = new SimpleLogEntry
+			{
+				EntryDateTime = DateTime.Now.AddDays(-10),
+				Severity = Severity.Critical
+			};
 
 			// Assert
 			Assert.IsTrue(_rule.ShouldImport(logEntry));
@@ -49,7 +56,10 @@ namespace Structural.Test
 		public void ImportsEntryWithinSpecifiedTimeSpan()
 		{
 			// Arrange
-			var logEntry = new SimpleLogEntry { EntryDateTime = DateTime.Now.AddDays(-5) };
+			var logEntry = new SimpleLogEntry
+			{
+				EntryDateTime = DateTime.Now.AddDays(-5)
+			};
 
 			// Assert
 			Assert.IsTrue(_rule.ShouldImport(logEntry));
